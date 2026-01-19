@@ -24,7 +24,7 @@ public class ListallCommand implements Command {
     final SlashCommandInteractionEvent event;
     final boolean raw;
 
-    public ListCommand(SlashCommandInteractionEvent event, boolean raw) {
+    public ListallCommand(SlashCommandInteractionEvent event, boolean raw) {
         this.event = event;
         this.raw   = raw;
     }
