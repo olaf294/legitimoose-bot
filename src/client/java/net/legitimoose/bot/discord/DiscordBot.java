@@ -52,12 +52,12 @@ public class DiscordBot extends ListenerAdapter {
                                         "player",
                                         "The username of the player you want to message",
                                         true)
-                                .addOption(OptionType.STRING, "message", "The message you want to send", true)),
+                                .addOption(OptionType.STRING, "message", "The message you want to send", true),
                         Commands.slash("listall", "List all online worlds with the players in them")
                                 .addOption(
                                         OptionType.BOOLEAN,
                                         "raw",
-                                        "True if you want to output world UUIDs instead of the world name")
+                                        "True if you want to output world UUIDs instead of the world name"))
                 .queue();
     }
 
