@@ -27,11 +27,11 @@ public class ShoutCommand implements Command {
         }
         String newMessage = ("[ᴅɪsᴄᴏʀᴅ] " + event.getMember().getEffectiveName() + ": " + message).replace("\n", "<br>").replace("§", "?");
         if (newMessage.length() >= 100) {
-            event.reply("Failed to send, message too long!").setEphemeral(true).queue();
+            event.reply("Failed to send, message too long!").queue();
             return;
         }
         LegitimooseBotClient.mc.getConnection().sendCommand("shout " + newMessage);
-        event.reply(String.format("Shouted `%s`", message.trim())).queue();
+        event.reply(String.format("Shouted `%s`", message.trim())).setEphemeral(true).queue();
         cooldown.put(userId, System.currentTimeMillis());
     }
 }
